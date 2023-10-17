@@ -52,14 +52,14 @@ void Graph::BFS(int s,int e) {
 
 void Graph::retrace( int e,std::vector<int>& prev) // retraces the path from end node to start 
 {
-  std::vector<int> path;
+  std::vector<int> path; // created new vector for showing the path 
   for (int i = e; i !=-1;i=prev[i] )
   {
-    path.push_back(i); 
+    path.push_back(i);   // adding the path to the vector
   }
   for (auto i = path.rbegin(); i !=path.rend(); i++)
   {
-    std::cout<<*i<<" ";
+    std::cout<<*i<<" ";   // the path
   }
 
   std::cout<<std::endl;
