@@ -1,0 +1,26 @@
+BFS(Graph, start_vertex):
+    Initialize an empty queue and a set to keep track of visited vertices
+    Enqueue start_vertex into the queue
+    Mark start_vertex as visited
+    Set parent of start_vertex as NULL
+    
+    while queue is not empty:
+        Dequeue a vertex from the queue and call it current_vertex
+        
+        for each neighbor of current_vertex:
+            if neighbor is not visited:
+                Mark neighbor as visited
+                Set parent of neighbor as current_vertex
+                Enqueue neighbor into the queue
+                
+    return parent information (can be used for path tracing)
+
+TracePath(parent, start_vertex, end_vertex):
+    Initialize an empty path list
+    Set current_vertex as end_vertex
+    
+    while current_vertex is not NULL:
+        Add current_vertex to the beginning of the path list
+        Set current_vertex as parent of current_vertex
+        
+    return path list
