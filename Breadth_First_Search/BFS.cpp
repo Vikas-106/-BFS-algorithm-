@@ -67,7 +67,7 @@ void Graph::retrace( int e,std::vector<int>& prev) // retraces the path from end
    
 }
 int main() {
-    Graph g(7);
+    Graph g(7); // no of vertices
     g.addEdge(0, 1);
     g.addEdge(0, 3);
     g.addEdge(1, 0);
@@ -84,7 +84,7 @@ int main() {
     g.addEdge(5, 2);
     g.addEdge(5, 4);
     g.addEdge(6, 3);
-    g.BFS(0,5);
+    g.BFS(0,5);  // give the start and end node
     
 
     return 0;
